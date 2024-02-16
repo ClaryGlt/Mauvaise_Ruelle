@@ -15,12 +15,12 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-// List<AdModel> adModels = new AdManager().loadAdsFromJson(getContext());
+// ArrayList<AdModel> adModels = new AdManager().loadAdsFromJson(getContext());
 
 public class AdManager {
 
-    public List<AdModel> loadAdsFromJson(Context context) {
-        List<AdModel> adModels = new ArrayList<>();
+    public ArrayList<AdModel> loadAdsFromJson(Context context) {
+        ArrayList<AdModel> adModels = new ArrayList<>();
 
         // Ouvre le fichier JSON
         try {
