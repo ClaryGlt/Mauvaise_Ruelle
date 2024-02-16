@@ -12,11 +12,14 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+// List<AdModel> adModels = new AdManager().loadAdsFromJson(getContext());
+
 public class AdManager {
 
     public List<AdModel> loadAdsFromJson(Context context) {
         List<AdModel> adModels = new ArrayList<>();
 
+        // Ouvre le fichier JSON
         try {
             InputStream inputStream = context.getResources().openRawResource(R.list_data.data);
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
@@ -26,12 +29,22 @@ public class AdManager {
                 stringBuilder.append(line);
             }
             inputStream.close();
+            String json = stringBuilder.toString();
 
+            // Convertit le JSON en tableau d'AdModel
             Gson gson = new Gson();
-            AdModel[] adArray = gson.fromJson(stringBuilder.toString(), AdModel[].class);
+            JsonObject jsonObject = gson.fromJson(json, JsonObject.class);
+            JsonArray jsonArray = jsonObject.getAsJsonArray("data");
 
-            for (AdModel ad : adArray) {
-                adModels.add(ad);
+            // Parcourt chaque élément du tableau JSON
+            for (JsonElement element : jsonArray) {
+                JsonObject adObject = element.getAsJsonObject();
+                String title = adObject.get("titre").getAsString();
+                String address = adObject.get("adresse").getAsString();
+                int image = adObject.get("image").getAsInt();
+                
+                // Ajout de l'AdModel à la liste
+                adModels.add(new AdModel(title, address, image));
             }
 
         } catch (IOException e) {
@@ -41,6 +54,7 @@ public class AdManager {
         return adModels;
     }
 }
+
 
 
 public class AdModel {
