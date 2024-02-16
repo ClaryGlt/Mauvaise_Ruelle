@@ -163,6 +163,171 @@
       "categorie": "Énergies renouvelables",
       "image": "panneau_solaire_polycristallin.png",
       "id_vendeur": 0
+    },
+    {
+      "titre": "Porte d'entrée en acier",
+      "marque": "SteelGuard",
+      "prix": 900,
+      "ref": "PA8901",
+      "description": "Porte d'entrée en acier avec système de verrouillage multipoints, dimensions 100x210 cm.",
+      "dimension": "100x210",
+      "categorie": "Portes",
+      "image": "porte_acier.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Tuiles en zinc",
+      "marque": "ZincPro",
+      "prix": 700,
+      "ref": "TZ2345",
+      "description": "Lot de 60 tuiles en zinc pour toiture, longue durabilité.",
+      "dimension": "30x50",
+      "categorie": "Toitures",
+      "image": "tuiles_zinc.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Fenêtre en aluminium",
+      "marque": "AluWindows",
+      "prix": 350,
+      "ref": "FA6789",
+      "description": "Fenêtre en aluminium avec double vitrage, dimensions 120x150 cm.",
+      "dimension": "120x150",
+      "categorie": "Fenêtres",
+      "image": "fenetre_aluminium.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Échelle télescopique",
+      "marque": "LadderTech",
+      "prix": 200,
+      "ref": "ET3456",
+      "description": "Échelle télescopique en aluminium, extensible jusqu'à 5 mètres, dimensions repliée 80x50 cm.",
+      "dimension": "80x50",
+      "categorie": "Matériel de construction",
+      "image": "echelle_telescopique.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Panneau solaire amorphe",
+      "marque": "SolarTech",
+      "prix": 600,
+      "ref": "PA5678",
+      "description": "Panneau solaire amorphe flexible de 100W, dimensions 50x100 cm.",
+      "dimension": "50x100",
+      "categorie": "Énergies renouvelables",
+      "image": "panneau_solaire_amorphe.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Porte de garage sectionnelle",
+      "marque": "GaragePro",
+      "prix": 1500,
+      "ref": "PG1234",
+      "description": "Porte de garage sectionnelle motorisée en acier, dimensions 240x210 cm.",
+      "dimension": "240x210",
+      "categorie": "Portes",
+      "image": "porte_garage_sectionnelle.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Tuiles en fibrociment",
+      "marque": "FiberPro",
+      "prix": 800,
+      "ref": "TF5678",
+      "description": "Lot de 70 tuiles en fibrociment, résistantes aux intempéries, dimensions 40x60 cm.",
+      "dimension": "40x60",
+      "categorie": "Toitures",
+      "image": "tuiles_fibrociment.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Fenêtre en bois exotique",
+      "marque": "ExoWood",
+      "prix": 400,
+      "ref": "FW9012",
+      "description": "Fenêtre en bois exotique avec double vitrage, dimensions 120x180 cm.",
+      "dimension": "120x180",
+      "categorie": "Fenêtres",
+      "image": "fenetre_bois_exotique.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Bétonnière à essence",
+      "marque": "BTPFuel",
+      "prix": 700,
+      "ref": "BE2345",
+      "description": "Bétonnière à essence de capacité 200 litres, avec moteur puissant, dimensions 150x200 cm.",
+      "dimension": "150x200",
+      "categorie": "Matériel de construction",
+      "image": "betonniere_essence.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Panneau solaire flexible",
+      "marque": "FlexSolar",
+      "prix": 900,
+      "ref": "PF6789",
+      "description": "Panneau solaire flexible monocristallin de 150W, dimensions 60x100 cm.",
+      "dimension": "60x100",
+      "categorie": "Énergies renouvelables",
+      "image": "panneau_solaire_flexible.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Porte de garage basculante",
+      "marque": "GarageMaster",
+      "prix": 1800,
+      "ref": "PG4567",
+      "description": "Porte de garage basculante en acier galvanisé, dimensions 250x220 cm.",
+      "dimension": "250x220",
+      "categorie": "Portes",
+      "image": "porte_garage_basculante.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Tuiles en bitume",
+      "marque": "BituTiles",
+      "prix": 900,
+      "ref": "TB1234",
+      "description": "Lot de 80 tuiles en bitume pour toiture plate, dimensions 50x70 cm.",
+      "dimension": "50x70",
+      "categorie": "Toitures",
+      "image": "tuiles_bitume.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Fenêtre en PVC avec volet roulant",
+      "marque": "RollWindow",
+      "prix": 500,
+      "ref": "FR5678",
+      "description": "Fenêtre en PVC avec volet roulant intégré, dimensions 110x160 cm.",
+      "dimension": "110x160",
+      "categorie": "Fenêtres",
+      "image": "fenetre_pvc_volet_roulant.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Bétonnière thermique",
+      "marque": "ThermoBTP",
+      "prix": 1000,
+      "ref": "BT2345",
+      "description": "Bétonnière thermique de capacité 250 litres, pour les chantiers sans électricité, dimensions 170x220 cm.",
+      "dimension": "170x220",
+      "categorie": "Matériel de construction",
+      "image": "betonniere_thermique.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Panneau solaire monocristallin pliable",
+      "marque": "FoldSolar",
+      "prix": 1200,
+      "ref": "PF7890",
+      "description": "Panneau solaire monocristallin pliable de 200W, dimensions plié : 80x60 cm, dimensions déplié : 160x120 cm.",
+      "dimension": "80x60 (plié), 160x120 (déplié)",
+      "categorie": "Énergies renouvelables",
+      "image": "panneau_solaire_pliable.png",
+      "id_vendeur": 0
     }
   ]
   
