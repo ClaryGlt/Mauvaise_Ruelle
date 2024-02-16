@@ -53,7 +53,7 @@ public class AdListViewActivity extends AppCompatActivity {
 
         Log.w("AdListViewActivity", "avantfor")
         for(int i=0; i<adAdapter.getCount(); i++){
-            Log.w("AdListViewActivity", "infor"+i)
+            Log.w("AdListViewActivity", "infor"+i) //cassde des le i=0 ici
 
             linearLayout.addView(adAdapter.getView(i, findViewById(R.id.testtest), null));
 
