@@ -28,7 +28,7 @@ public class AdManager {
             inputStream.close();
 
             Gson gson = new Gson();
-            AdModel[] adArray = gson.fromJson(stringBuilder.toString();, AdModel[].class);
+            AdModel[] adArray = gson.fromJson(stringBuilder.toString(), AdModel[].class);
 
             for (AdModel ad : adArray) {
                 adModels.add(ad);
