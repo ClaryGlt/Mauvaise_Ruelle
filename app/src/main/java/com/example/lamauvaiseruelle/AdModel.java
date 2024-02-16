@@ -31,19 +31,16 @@ public class AdManager {
             inputStream.close();
             String json = stringBuilder.toString();
 
-            // Convertit le JSON en tableau d'AdModel
             Gson gson = new Gson();
             JsonObject jsonObject = gson.fromJson(json, JsonObject.class);
             JsonArray jsonArray = jsonObject.getAsJsonArray("data");
 
-            // Parcourt chaque élément du tableau JSON
             for (JsonElement element : jsonArray) {
                 JsonObject adObject = element.getAsJsonObject();
                 String title = adObject.get("titre").getAsString();
                 String address = adObject.get("adresse").getAsString();
                 int image = adObject.get("image").getAsInt();
                 
-                // Ajout de l'AdModel à la liste
                 adModels.add(new AdModel(title, address, image));
             }
 
