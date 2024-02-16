@@ -15,7 +15,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-// List<AdModel> adModels = new AdManager().loadAdsFromJson(getContext());
+// ArrayList<AdModel> adModels = new AdManager().loadAdsFromJson(getContext());
 
 public class AdManager {
 
