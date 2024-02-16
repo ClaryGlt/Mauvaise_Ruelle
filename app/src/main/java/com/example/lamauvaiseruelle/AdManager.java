@@ -43,7 +43,15 @@ public class AdManager {
 
                 String title = adObject.get("title").getAsString();
                 String address = adObject.get("address").getAsString();
+                String marque = adObject.get("marque").getAsString();
+                int prix = adObject.get("prix").getAsInt();
+                int id_obj = adObject.get("id_obj").getAsInt();
+                String description = adObject.get("description").getAsString();
+                String dimension = adObject.get("dimension").getAsString();
+                String categorie = adObject.get("categorie").getAsString();
                 String nom_image = adObject.get("image").getAsString();
+                int id_vendeur = adObject.get("id_vendeur").getAsInt();
+
                 int image = context.getResources().getIdentifier(nom_image, "drawable", context.getPackageName());
                 
                 if (image == 0) { 
@@ -58,7 +66,7 @@ public class AdManager {
                 }
                 
                 // Ajouter l'objet AdModel à la liste
-                adModels.add(new AdModel(title, address, image));
+                adModels.add(new AdModel(title, address, marque, prix, id_obj, description, dimension, categorie, image, id_vendeur));
             }
         } catch (IOException e) {
             Log.e("AdManager", "Error reading JSON file", e);
