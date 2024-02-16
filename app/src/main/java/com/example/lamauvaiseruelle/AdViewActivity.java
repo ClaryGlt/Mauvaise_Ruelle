@@ -15,6 +15,8 @@ public class AdViewActivity extends AppCompatActivity {
 
     private List<AdModel> adModels;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +28,7 @@ public class AdViewActivity extends AppCompatActivity {
 
 
         if (!adModels.isEmpty()) {
-            FectchAd(0); //Pour l'instant 0. Sinon, on met l'endroit ou l'on se trouve dans l'arrayList lorsque que l'utilisateur clique dessus
+            FectchAd( getIntent().getIntExtra("numero truc", 0) ); //Pour l'instant 0. Sinon, on met l'endroit ou l'on se trouve dans l'arrayList lorsque que l'utilisateur clique dessus
         }
     }
 

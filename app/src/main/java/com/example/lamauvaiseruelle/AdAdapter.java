@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -41,6 +42,7 @@ public class AdAdapter extends BaseAdapter {
         ImageView imageIV = convertview.findViewById(R.id.imageAdModel);
         TextView titleTV = convertview.findViewById(R.id.titreAdModel) ;
         TextView addressTV = convertview.findViewById(R.id.adresseAdModel) ;
+        //poti boutton pour l'appeler différent, avec un nom en fonction de i, pour avoir que des bouttons différents
         imageIV.setImageResource(ad.getImage());
         titleTV.setText(ad.getTitle());
         addressTV.setText(ad.getAddress());

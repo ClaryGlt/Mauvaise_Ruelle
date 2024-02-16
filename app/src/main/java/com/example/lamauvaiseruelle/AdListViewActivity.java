@@ -3,12 +3,14 @@ package com.example.lamauvaiseruelle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -26,6 +28,10 @@ public class AdListViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         AdAdapter adAdapter = new AdAdapter(this);
+
+        Button button_descr = findViewById(R.id.button_description);
+
+
 
         ScrollView scrollView = new ScrollView(this);
         ViewGroup.LayoutParams scrollViewParams = new ViewGroup.LayoutParams(
@@ -45,6 +51,17 @@ public class AdListViewActivity extends AppCompatActivity {
 
         for(int i=0; i<adAdapter.getCount(); i++){
             linearLayout.addView(adAdapter.getView(i, findViewById(R.id.testtest), null));
+
+            final int numero = i;
+
+            button_descr.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent lancementAdViewActivity = new Intent(AdListViewActivity.this, AdViewActivity.class);
+                    startActivity(lancementAdViewActivity);
+                    lancementAdViewActivity.putExtra("numero truc", numero);
+                }
+            });
         }
 
         scrollView.addView((linearLayout));
