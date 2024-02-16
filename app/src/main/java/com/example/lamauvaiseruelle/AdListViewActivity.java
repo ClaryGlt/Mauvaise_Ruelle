@@ -59,7 +59,7 @@ public class AdListViewActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     Intent lancementAdViewActivity = new Intent(AdListViewActivity.this, AdViewActivity.class);
                     startActivity(lancementAdViewActivity);
-                    lancementAdViewActivity.putExtra("numero truc", numero);
+                    lancementAdViewActivity.putExtra("numero_truc_"+numero, numero);
                 }
             });
         }
