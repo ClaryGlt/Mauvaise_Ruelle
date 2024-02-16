@@ -1,0 +1,168 @@
+[
+    {
+      "titre": "Porte en bois",
+      "marque": "XyloCraft",
+      "prix": 150,
+      "ref": "PC1234",
+      "description": "Porte en bois massif de chêne, dimensions standard 80x200 cm.",
+      "dimension": "80x200",
+      "categorie": "Portes",
+      "image": "porte_bois.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Tuiles en céramique",
+      "marque": "TuilePro",
+      "prix": 300,
+      "ref": "TC5678",
+      "description": "Lot de 50 tuiles en céramique de couleur rouge, pour toiture.",
+      "dimension": "30x30",
+      "categorie": "Toitures",
+      "image": "tuiles_ceramique.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Bétonnière électrique",
+      "marque": "BTPMaster",
+      "prix": 500,
+      "ref": "BE7890",
+      "description": "Bétonnière électrique de capacité 120 litres, idéale pour les petits chantiers.",
+      "dimension": "120x180",
+      "categorie": "Matériel de construction",
+      "image": "betonniere_electrique.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Fenêtre PVC",
+      "marque": "Fenex",
+      "prix": 200,
+      "ref": "FP4567",
+      "description": "Fenêtre en PVC double vitrage, dimensions standard 100x150 cm.",
+      "dimension": "100x150",
+      "categorie": "Fenêtres",
+      "image": "fenetre_pvc.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Panneau solaire",
+      "marque": "SolarTech",
+      "prix": 1000,
+      "ref": "PS7890",
+      "description": "Panneau solaire monocristallin de 300W, dimensions 100x150 cm.",
+      "dimension": "100x150",
+      "categorie": "Énergies renouvelables",
+      "image": "panneau_solaire.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Porte coulissante en aluminium",
+      "marque": "AluDesign",
+      "prix": 400,
+      "ref": "PC2345",
+      "description": "Porte coulissante en aluminium avec double vitrage, dimensions 150x220 cm.",
+      "dimension": "150x220",
+      "categorie": "Portes",
+      "image": "porte_aluminium.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Tuiles en ardoise",
+      "marque": "ArdoisePro",
+      "prix": 500,
+      "ref": "TA6789",
+      "description": "Lot de 100 tuiles en ardoise naturelle, pour toiture.",
+      "dimension": "40x60",
+      "categorie": "Toitures",
+      "image": "tuiles_ardoise.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Fenêtre en bois",
+      "marque": "WoodWindows",
+      "prix": 250,
+      "ref": "FW1234",
+      "description": "Fenêtre en bois avec vitrage isolant, dimensions 120x160 cm.",
+      "dimension": "120x160",
+      "categorie": "Fenêtres",
+      "image": "fenetre_bois.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Échafaudage en aluminium",
+      "marque": "ScaffoldPro",
+      "prix": 800,
+      "ref": "EA3456",
+      "description": "Échafaudage en aluminium avec plateforme réglable, dimensions 200x300 cm.",
+      "dimension": "200x300",
+      "categorie": "Matériel de construction",
+      "image": "echafaudage_aluminium.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Panneau solaire monocristallin",
+      "marque": "SolarTech",
+      "prix": 1200,
+      "ref": "PS2345",
+      "description": "Panneau solaire monocristallin haute performance, dimensions 120x180 cm.",
+      "dimension": "120x180",
+      "categorie": "Énergies renouvelables",
+      "image": "panneau_solaire_monocristallin.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Porte blindée",
+      "marque": "SecurDoor",
+      "prix": 1200,
+      "ref": "PB5678",
+      "description": "Porte blindée avec système de sécurité avancé, dimensions 90x210 cm.",
+      "dimension": "90x210",
+      "categorie": "Portes",
+      "image": "porte_blindee.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Tuiles en terre cuite",
+      "marque": "TerreCuitePro",
+      "prix": 600,
+      "ref": "TT7890",
+      "description": "Lot de 80 tuiles en terre cuite, pour toiture traditionnelle.",
+      "dimension": "25x35",
+      "categorie": "Toitures",
+      "image": "tuiles_terre_cuite.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Fenêtre en PVC double vitrage",
+      "marque": "EcoWindows",
+      "prix": 300,
+      "ref": "FP5678",
+      "description": "Fenêtre en PVC avec double vitrage thermique, dimensions 100x150 cm.",
+      "dimension": "100x150",
+      "categorie": "Fenêtres",
+      "image": "fenetre_pvc_double_vitrage.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Groupe électrogène",
+      "marque": "PowerGen",
+      "prix": 1000,
+      "ref": "GE1234",
+      "description": "Groupe électrogène diesel de 5 kW, idéal pour les chantiers sans électricité, dimensions 80x120 cm.",
+      "dimension": "80x120",
+      "categorie": "Matériel de construction",
+      "image": "groupe_electrogene.png",
+      "id_vendeur": 0
+    },
+    {
+      "titre": "Panneau solaire polycristallin",
+      "marque": "SolarTech",
+      "prix": 800,
+      "ref": "PS4567",
+      "description": "Panneau solaire polycristallin de 250W, dimensions 100x150 cm.",
+      "dimension": "100x150",
+      "categorie": "Énergies renouvelables",
+      "image": "panneau_solaire_polycristallin.png",
+      "id_vendeur": 0
+    }
+  ]
+  
