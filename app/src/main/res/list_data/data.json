@@ -1,6 +1,7 @@
 [
     {
       "titre": "Porte en bois",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "XyloCraft",
       "prix": 150,
       "ref": "PC1234",
@@ -12,6 +13,7 @@
     },
     {
       "titre": "Tuiles en céramique",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "TuilePro",
       "prix": 300,
       "ref": "TC5678",
@@ -23,6 +25,7 @@
     },
     {
       "titre": "Bétonnière électrique",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "BTPMaster",
       "prix": 500,
       "ref": "BE7890",
@@ -34,6 +37,7 @@
     },
     {
       "titre": "Fenêtre PVC",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "Fenex",
       "prix": 200,
       "ref": "FP4567",
@@ -45,6 +49,7 @@
     },
     {
       "titre": "Panneau solaire",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "SolarTech",
       "prix": 1000,
       "ref": "PS7890",
@@ -56,6 +61,7 @@
     },
     {
       "titre": "Porte coulissante en aluminium",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "AluDesign",
       "prix": 400,
       "ref": "PC2345",
@@ -67,6 +73,7 @@
     },
     {
       "titre": "Tuiles en ardoise",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "ArdoisePro",
       "prix": 500,
       "ref": "TA6789",
@@ -78,6 +85,7 @@
     },
     {
       "titre": "Fenêtre en bois",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "WoodWindows",
       "prix": 250,
       "ref": "FW1234",
@@ -89,6 +97,7 @@
     },
     {
       "titre": "Échafaudage en aluminium",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "ScaffoldPro",
       "prix": 800,
       "ref": "EA3456",
@@ -100,6 +109,7 @@
     },
     {
       "titre": "Panneau solaire monocristallin",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "SolarTech",
       "prix": 1200,
       "ref": "PS2345",
@@ -111,6 +121,7 @@
     },
     {
       "titre": "Porte blindée",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "SecurDoor",
       "prix": 1200,
       "ref": "PB5678",
@@ -122,6 +133,7 @@
     },
     {
       "titre": "Tuiles en terre cuite",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "TerreCuitePro",
       "prix": 600,
       "ref": "TT7890",
@@ -133,6 +145,7 @@
     },
     {
       "titre": "Fenêtre en PVC double vitrage",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "EcoWindows",
       "prix": 300,
       "ref": "FP5678",
@@ -144,6 +157,7 @@
     },
     {
       "titre": "Groupe électrogène",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "PowerGen",
       "prix": 1000,
       "ref": "GE1234",
@@ -155,6 +169,7 @@
     },
     {
       "titre": "Panneau solaire polycristallin",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "SolarTech",
       "prix": 800,
       "ref": "PS4567",
@@ -166,6 +181,7 @@
     },
     {
       "titre": "Porte d'entrée en acier",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "SteelGuard",
       "prix": 900,
       "ref": "PA8901",
@@ -177,6 +193,7 @@
     },
     {
       "titre": "Tuiles en zinc",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "ZincPro",
       "prix": 700,
       "ref": "TZ2345",
@@ -188,6 +205,7 @@
     },
     {
       "titre": "Fenêtre en aluminium",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "AluWindows",
       "prix": 350,
       "ref": "FA6789",
@@ -199,6 +217,7 @@
     },
     {
       "titre": "Échelle télescopique",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "LadderTech",
       "prix": 200,
       "ref": "ET3456",
@@ -210,6 +229,7 @@
     },
     {
       "titre": "Panneau solaire amorphe",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "SolarTech",
       "prix": 600,
       "ref": "PA5678",
@@ -221,6 +241,7 @@
     },
     {
       "titre": "Porte de garage sectionnelle",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "GaragePro",
       "prix": 1500,
       "ref": "PG1234",
@@ -232,6 +253,7 @@
     },
     {
       "titre": "Tuiles en fibrociment",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "FiberPro",
       "prix": 800,
       "ref": "TF5678",
@@ -243,6 +265,7 @@
     },
     {
       "titre": "Fenêtre en bois exotique",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "ExoWood",
       "prix": 400,
       "ref": "FW9012",
@@ -254,6 +277,7 @@
     },
     {
       "titre": "Bétonnière à essence",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "BTPFuel",
       "prix": 700,
       "ref": "BE2345",
@@ -265,6 +289,7 @@
     },
     {
       "titre": "Panneau solaire flexible",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "FlexSolar",
       "prix": 900,
       "ref": "PF6789",
@@ -276,6 +301,7 @@
     },
     {
       "titre": "Porte de garage basculante",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "GarageMaster",
       "prix": 1800,
       "ref": "PG4567",
@@ -287,6 +313,7 @@
     },
     {
       "titre": "Tuiles en bitume",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "BituTiles",
       "prix": 900,
       "ref": "TB1234",
@@ -298,6 +325,7 @@
     },
     {
       "titre": "Fenêtre en PVC avec volet roulant",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "RollWindow",
       "prix": 500,
       "ref": "FR5678",
@@ -309,6 +337,7 @@
     },
     {
       "titre": "Bétonnière thermique",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "ThermoBTP",
       "prix": 1000,
       "ref": "BT2345",
@@ -320,6 +349,7 @@
     },
     {
       "titre": "Panneau solaire monocristallin pliable",
+      "address":"3 rue des frères Peyronnet, Périgueux",
       "marque": "FoldSolar",
       "prix": 1200,
       "ref": "PF7890",
