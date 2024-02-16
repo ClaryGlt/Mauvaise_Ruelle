@@ -24,18 +24,23 @@ public class AdViewActivity extends AppCompatActivity {
 
         // Supposons que vous souhaitez afficher la première annonce de la liste
         if (!adModels.isEmpty()) {
-            AdModel firstAd = adModels.get(0);
-
-            // Références aux vues dans le layout
-            TextView title_description = findViewById(R.id.title_description_page);
-            ImageView image_description = findViewById(R.id.image_description_page);
-            TextView description_page = findViewById(R.id.Description_page);
-            Button button_description_page = findViewById(R.id.button_description_page);
-
-            // Mettez à jour les vues avec les données de l'annonce
-            title_description.setText(firstAd.getTitle());
-            image_description.setImageResource(firstAd.getImage());
-            description_page.setText(firstAd.getAddress());
+            FectchAd(0); //Pour l'instant 0. Sinon, on met l'endroit ou l'on se trouve dans l'arrayList lorsque que l'utilisateur clique dessus
         }
+    }
+
+
+    protected void FectchAd(int i){
+        AdModel firstAd = adModels.get(i);
+
+        // Références aux vues dans le layout
+        TextView title_description = findViewById(R.id.title_description_page);
+        ImageView image_description = findViewById(R.id.image_description_page);
+        TextView description_page = findViewById(R.id.Description_page);
+        Button button_description_page = findViewById(R.id.button_description_page);
+
+        // Mettez à jour les vues avec les données de l'annonce
+        title_description.setText(firstAd.getTitle());
+        image_description.setImageResource(firstAd.getImage());
+        description_page.setText(firstAd.getAddress());
     }
 }
