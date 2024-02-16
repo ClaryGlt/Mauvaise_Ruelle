@@ -21,6 +21,8 @@ public class AdManager {
 
     public ArrayList<AdModel> loadAdsFromJson(Context context) {
         ArrayList<AdModel> adModels = new ArrayList<>();
+        Log.e("claclowm", "debut");
+
 
         // Ouvre le fichier JSON
         try {
@@ -28,16 +30,29 @@ public class AdManager {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
             StringBuilder stringBuilder = new StringBuilder();
             String line;
+            Log.e("claclowm", "avant while");
             while ((line = bufferedReader.readLine()) != null) {
                 stringBuilder.append(line);
             }
             inputStream.close();
             String json = stringBuilder.toString();
+            Log.e("claclowm", "apreeswhile");
 
-            Gson gson = new Gson();
-            JsonObject jsonObject = gson.fromJson(json, JsonObject.class);
+            Log.e("JORSE", "0000");
+
+            Log.e("JORSE vistaprint", "JsonObject.class");
+            Log.e("JORSE vistaprint", (JsonObject.class).toString());
+            Log.e("JORSE vistaprint", "jose");
+            Log.e("JORSE vistaprint", (json).toString());
+
+            JsonObject jsonObject = new Gson().fromJson(json, JsonObject.class);
+
+
+
+            Log.e("JORSE", "1111");
             JsonArray jsonArray = jsonObject.getAsJsonArray("data");
 
+            Log.e("claclowm", "avantfor");
             for (JsonElement element : jsonArray) {
                 JsonObject adObject = element.getAsJsonObject();
                 String title = adObject.get("titre").getAsString();
@@ -51,14 +66,14 @@ public class AdManager {
                         Log.e("AdManager", "Aucun lien avec les images");
                     }    
                 }
-
+                Log.e("claclowm", "la MAXXXX");
                 adModels.add(new AdModel(title, address, image));
             }
-
+            Log.e("claclowm", "apresfor");
         } catch (IOException e) {
             Log.e("AdManager", "Error reading JSON file", e);
         }
-
+        Log.e("claclowm", "fin");
         return adModels;
     }
 }

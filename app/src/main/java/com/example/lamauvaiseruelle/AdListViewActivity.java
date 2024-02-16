@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,14 +23,10 @@ public class AdListViewActivity extends AppCompatActivity {
 
         //récupérer la liste d'Admodels
         //construise menu déroulant
-
+        Log.e("feur","uwu");
         AdAdapter adAdapter = new AdAdapter(this);
-
-
-
-
-
-        setContentView(adAdapter.getView(0, R.layout.item_listview_ad, viewgroup));
+        Log.e("feur","lesgo");
+        setContentView(adAdapter.getView(0, findViewById(R.id.testtest), null));
 
 
 
