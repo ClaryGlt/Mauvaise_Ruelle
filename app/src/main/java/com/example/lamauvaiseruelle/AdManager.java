@@ -44,13 +44,13 @@ public class AdManager {
                 String title = adObject.get("title").getAsString();
                 String address = adObject.get("address").getAsString();
                 String marque = adObject.get("marque").getAsString();
-                int prix = adObject.get("prix");
-                int id_obj = adObject.get("id_obj");
+                int prix = adObject.get("prix").getAsString().toInt();
+                int id_obj = adObject.get("id_obj").getAsString().toInt();
                 String description = adObject.get("description").getAsString();
                 String dimension = adObject.get("dimension").getAsString();
                 String categorie = adObject.get("categorie").getAsString();
                 String nom_image = adObject.get("image").getAsString();
-                int id_vendeur = adObject.get("id_vendeur");
+                int id_vendeur = adObject.get("id_vendeur").getAsString().toInt();
 
                 int image = context.getResources().getIdentifier(nom_image, "drawable", context.getPackageName());
                 
