@@ -26,10 +26,12 @@ public class AdListViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.w("AdListViewActivity", "debut")
 
         AdAdapter adAdapter = new AdAdapter(this);
 
         Button button_descr = findViewById(R.id.button_description);
+        Log.w("AdListViewActivity", "aprdebut")
 
 
 
@@ -49,7 +51,10 @@ public class AdListViewActivity extends AppCompatActivity {
         linearLayout.setOrientation((LinearLayout.VERTICAL));
         linearLayout.setLayoutParams(linearLayoutParams);
 
+        Log.w("AdListViewActivity", "avantfor")
         for(int i=0; i<adAdapter.getCount(); i++){
+            Log.w("AdListViewActivity", "infor"+i)
+
             linearLayout.addView(adAdapter.getView(i, findViewById(R.id.testtest), null));
 
             final int numero = i;
@@ -59,9 +64,11 @@ public class AdListViewActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     Intent lancementAdViewActivity = new Intent(AdListViewActivity.this, AdViewActivity.class);
                     startActivity(lancementAdViewActivity);
-                    lancementAdViewActivity.putExtra("numero_truc_"+numero, numero);
+                    lancementAdViewActivity.putExtra("numerotruc", numero);
                 }
             });
+            Log.w("AdListViewActivity", "fin_infor"+i)
+
         }
 
         scrollView.addView((linearLayout));
