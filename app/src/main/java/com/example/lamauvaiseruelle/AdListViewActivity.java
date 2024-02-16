@@ -9,8 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -24,14 +27,28 @@ public class AdListViewActivity extends AppCompatActivity {
 
         AdAdapter adAdapter = new AdAdapter(this);
 
-        LinearLayout layout_items = new LinearLayout(this);
-        layout_items.setOrientation (LinearLayout.VERTICAL);
+        ScrollView scrollView = new ScrollView(this);
+        ViewGroup.LayoutParams scrollViewParams = new ViewGroup.LayoutParams(
+                ScrollView.LayoutParams.MATCH_PARENT,
+                ScrollView.LayoutParams.MATCH_PARENT
+        );
+
+        scrollView.setLayoutParams(scrollViewParams);
+
+        LinearLayout linearLayout = new LinearLayout(this);
+        LinearLayout.LayoutParams linearLayoutParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        linearLayout.setOrientation((LinearLayout.VERTICAL));
+        linearLayout.setLayoutParams(linearLayoutParams);
 
         for(int i=0; i<adAdapter.getCount(); i++){
-            layout_items.addView(adAdapter.getView(i, findViewById(R.id.testtest), null));
+            linearLayout.addView(adAdapter.getView(i, findViewById(R.id.testtest), null));
         }
 
-        setContentView(layout_items);
+        scrollView.addView((linearLayout));
+        setContentView(scrollView);
 
 
 
