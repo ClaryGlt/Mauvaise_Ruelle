@@ -1,6 +1,8 @@
 package com.example.lamauvaiseruelle;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,7 +24,7 @@ public class AdViewActivity extends AppCompatActivity {
         AdManager adManager = new AdManager();
         adModels = adManager.loadAdsFromJson(this);
 
-        // Supposons que vous souhaitez afficher la première annonce de la liste
+
         if (!adModels.isEmpty()) {
             FectchAd(0); //Pour l'instant 0. Sinon, on met l'endroit ou l'on se trouve dans l'arrayList lorsque que l'utilisateur clique dessus
         }
@@ -37,6 +39,14 @@ public class AdViewActivity extends AppCompatActivity {
         ImageView image_description = findViewById(R.id.image_description_page);
         TextView description_page = findViewById(R.id.Description_page);
         Button button_description_page = findViewById(R.id.button_description_page);
+
+        button_description_page.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent lancementAdListViewActivity = new Intent(AdViewActivity.this, AdListViewActivity.class);
+                startActivity(lancementAdListViewActivity);
+            }
+        });
 
         // Mettez à jour les vues avec les données de l'annonce
         title_description.setText(firstAd.getTitle());

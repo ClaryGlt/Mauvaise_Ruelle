@@ -40,7 +40,7 @@
             android:id="@+id/button_description_page"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button test"
+            android:text="Retour"
             android:textStyle="italic"
             app:strokeColor="#C81212" />
     </LinearLayout>
