@@ -14,27 +14,35 @@
         <TextView
             android:id="@+id/title_description_page"
             android:layout_width="match_parent"
-            android:layout_height="74dp"
-            android:text="title_description_page" />
+            android:layout_height="wrap_content"
+            android:text="title_description_page"
+            android:textAlignment="center"
+            android:textSize="24sp" />
 
         <ImageView
             android:id="@+id/image_description_page"
-            android:layout_width="match_parent"
-            android:layout_height="612dp"
-            android:src="@drawable/betonniere_electrique"
-            app:srcCompat="@drawable/betonniere_electrique"
-            tools:srcCompat="@drawable/betonniere_electrique" />
+            android:layout_width="wrap_content"
+            android:layout_height="400sp"
+            android:src="@drawable/echelle_telescopique"
+             />
+
 
         <TextView
             android:id="@+id/Description_page"
             android:layout_width="match_parent"
-            android:layout_height="458dp"
-            android:text="description_page" />
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="description_page"
+            android:textAlignment="center"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/button_description_page"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button test" />
+            android:text="Button test"
+            android:textStyle="italic"
+            app:strokeColor="#C81212" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
