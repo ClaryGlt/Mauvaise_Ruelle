@@ -42,7 +42,15 @@ public class AdManager {
                 JsonObject adObject = element.getAsJsonObject();
                 String title = adObject.get("titre").getAsString();
                 String address = adObject.get("adresse").getAsString();
-                int image = adObject.get("image").getAsInt();
+                String nom_image = adObject.get("image").getAsString();
+                int image = getResources().getIdentifier(nom_image, "drawable", getPackageName());
+                if (image == 0){ //trouve pas l'image associée -> image générique
+                    int image = getResources().getIdentifier("none", "drawable", getPackageName());
+                    Log.w("AdManager", "Image pas trouvée");
+                    if (image == 0){ //image none pas trouvée -> ya un gros pb
+                        Log.e("AdManager", "Aucun lien avec les images");
+                    }    
+                }
 
                 adModels.add(new AdModel(title, address, image));
             }
