@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -21,13 +22,16 @@ public class AdListViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //récupérer la liste d'Admodels
-        //construise menu déroulant
-        Log.e("feur","uwu");
         AdAdapter adAdapter = new AdAdapter(this);
-        Log.e("feur","lesgo");
-        setContentView(adAdapter.getView(0, findViewById(R.id.testtest), null));
 
+        LinearLayout layout_items = new LinearLayout(this);
+        layout_items.setOrientation (LinearLayout.VERTICAL);
+
+        for(int i=0; i<adAdapter.getCount(); i++){
+            layout_items.addView(adAdapter.getView(i, findViewById(R.id.testtest), null));
+        }
+
+        setContentView(layout_items);
 
 
 
