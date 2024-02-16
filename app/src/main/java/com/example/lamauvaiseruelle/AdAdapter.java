@@ -44,8 +44,8 @@ public class AdAdapter extends BaseAdapter {
         imageIV.setImageResource(ad.getImage());
         titleTV.setText(ad.getTitle());
         addressTV.setText(ad.getAddress());
-        Log.e("tag", titleTV.toString());
-        Log.e("tag", addressTV.toString());
+        Log.d("AdAdapter", titleTV.toString());
+        Log.d("AdAdapter", addressTV.toString());
         return convertview;
     }
 }
