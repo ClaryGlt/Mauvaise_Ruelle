@@ -1,6 +1,7 @@
 package com.example.lamauvaiseruelle;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AdAdapter extends BaseAdapter {
+
     private final Context context;
     private final ArrayList<AdModel> adModelArrayList;
     private final LayoutInflater inflater;
@@ -19,8 +21,11 @@ public class AdAdapter extends BaseAdapter {
     // Constructor
     public AdAdapter(Context context) {
         this.context = context;
+
         inflater = (LayoutInflater.from(context));
+        Log.e("coucouc", "cMarchmoin");
         this.adModelArrayList = new AdManager().loadAdsFromJson(context);
+        Log.e("coucouc", "cMarchmieu");
     }
     @Override
     public int getCount() { return adModelArrayList.size() ; } // Return ad number
@@ -29,18 +34,18 @@ public class AdAdapter extends BaseAdapter {
     @Override
     public long getItemId(int i) { return i ; } // Return ad id i
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(int i, View convertview, ViewGroup viewgroup) {
         // Get ad number i
         AdModel ad = getItem(i) ;
-        view = inflater.inflate(R.layout.item_listview_ad, null);
+        convertview = inflater.inflate(R.layout.item_listview_ad, null);
 
         // Get the image view and both text views
-        ImageView imageIV = view.findViewById(R.id.imageAdModel);
-        TextView titleTV = view.findViewById(R.id.titreAdModel) ;
-        TextView addressTV = view.findViewById(R.id.adresseAdModel) ;
+        ImageView imageIV = convertview.findViewById(R.id.imageAdModel);
+        TextView titleTV = convertview.findViewById(R.id.titreAdModel) ;
+        TextView addressTV = convertview.findViewById(R.id.adresseAdModel) ;
         imageIV.setImageResource(ad.getImage());
         titleTV.setText(ad.getTitle());
         addressTV.setText(ad.getAddress());
-        return view;
+        return convertview;
     }
 }
