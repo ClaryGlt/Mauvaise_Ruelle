@@ -23,9 +23,7 @@ public class AdAdapter extends BaseAdapter {
         this.context = context;
 
         inflater = (LayoutInflater.from(context));
-        Log.e("coucouc", "cMarchmoin");
         this.adModelArrayList = new AdManager().loadAdsFromJson(context);
-        Log.e("coucouc", "cMarchmieu");
     }
     @Override
     public int getCount() { return adModelArrayList.size() ; } // Return ad number
@@ -46,6 +44,8 @@ public class AdAdapter extends BaseAdapter {
         imageIV.setImageResource(ad.getImage());
         titleTV.setText(ad.getTitle());
         addressTV.setText(ad.getAddress());
+        Log.e("tag", titleTV.toString());
+        Log.e("tag", addressTV.toString());
         return convertview;
     }
 }
