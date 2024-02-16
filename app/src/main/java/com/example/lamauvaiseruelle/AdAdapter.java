@@ -1,6 +1,7 @@
 package com.example.lamauvaiseruelle;
 
 import android.content.Context;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,17 +24,17 @@ public class AdAdapter extends BaseAdapter {
     @Override
     public int getCount() { return adModelArrayList.size() ; } // Return ad number
     @Override
-    public Object getItem(int i) { return adModelArrayList.get(i); } // Return ad number i
+    public AdModel getItem(int i) { return adModelArrayList.get(i); } // Return ad number i
     @Override
-    public long getItemId(int i) { return ... ; } // Return ad id i
+    public long getItemId(int i) { return i ; } // Return ad id i
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         // Get ad number i
-        AdModel ad = ... ;
+        AdModel ad = getItem(i) ;
         view = inflater.inflate(R.layout.item_listview_ad, null);
 
         // Get the image view and both text views
-        ImageView imageIV = ... ;
+        ImageView imageIV = ;
         TextView titleTV = ... ;
         TextView addressTV = ... ;
         imageIV.setImageResource(...);

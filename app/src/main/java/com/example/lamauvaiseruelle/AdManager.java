@@ -43,9 +43,9 @@ public class AdManager {
                 String title = adObject.get("titre").getAsString();
                 String address = adObject.get("adresse").getAsString();
                 String nom_image = adObject.get("image").getAsString();
-                int image = getResources().getIdentifier(nom_image, "drawable", getPackageName());
+                int image = context.getResources().getIdentifier(nom_image, "drawable", context.getPackageName());
                 if (image == 0){ //trouve pas l'image associée -> image générique
-                    int image = getResources().getIdentifier("none", "drawable", getPackageName());
+                    image = context.getResources().getIdentifier("none", "drawable", context.getPackageName());
                     Log.w("AdManager", "Image pas trouvée");
                     if (image == 0){ //image none pas trouvée -> ya un gros pb
                         Log.e("AdManager", "Aucun lien avec les images");
