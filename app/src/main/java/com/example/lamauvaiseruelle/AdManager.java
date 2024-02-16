@@ -19,8 +19,8 @@ import java.util.List;
 
 public class AdManager {
 
-    public List<AdModel> loadAdsFromJson(Context context) {
-        List<AdModel> adModels = new ArrayList<>();
+    public ArrayList<AdModel> loadAdsFromJson(Context context) {
+        ArrayList<AdModel> adModels = new ArrayList<>();
 
         // Ouvre le fichier JSON
         try {

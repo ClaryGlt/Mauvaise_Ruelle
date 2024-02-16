@@ -12,15 +12,26 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AdListViewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ad_list_view);
 
         //récupérer la liste d'Admodels
+        //construise menu déroulant
+
+        AdAdapter adAdapter = new AdAdapter(this);
+
+
+
+
+
+        setContentView(adAdapter.getView(0, R.layout.item_listview_ad, viewgroup));
+
+
 
 
     }
