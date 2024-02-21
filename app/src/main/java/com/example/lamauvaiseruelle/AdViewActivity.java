@@ -2,7 +2,6 @@ package com.example.lamauvaiseruelle;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -38,10 +37,10 @@ public class AdViewActivity extends AppCompatActivity {
         AdModel firstAd = adModels.get(i);
 
         // Références aux vues dans le layout
-        TextView title_description = findViewById(R.id.title_description_page);
-        ImageView image_description = findViewById(R.id.image_description_page);
-        TextView description_page = findViewById(R.id.Description_page);
-        Button button_description_page = findViewById(R.id.button_description_page);
+        TextView title_description = findViewById(R.id.title_view_page);
+        ImageView image_description = findViewById(R.id.image_view_page);
+        TextView description_page = findViewById(R.id.Description_View_page);
+        Button button_description_page = findViewById(R.id.button_view_page);
 
         button_description_page.setOnClickListener(new View.OnClickListener() {
             @Override
