@@ -74,4 +74,34 @@ public class AdManager {
 
         return adModels;
     }
+
+    public void saveAdsToJson(ArrayList<AdModel> adModels) {
+        try {
+            FileOutputStream fos = context.openFileOutput("data.json", Context.MODE_PRIVATE);
+            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fos));
+
+            writer.write("[\n");
+
+            for (AdModel adModel : adModels) {
+                writer.write("\t{\n");
+                writer.write("\t\t\"title\": \"" + adModel.getTitle() + "\",\n");
+                writer.write("\t\t\"address\": \"" + adModel.getAddress() + "\",\n");
+                writer.write("\t\t\"marque\": \"" + adModel.getMarque() + "\",\n");
+                writer.write("\t\t\"prix\": " + adModel.getPrix() + ",\n");
+                writer.write("\t\t\"id_obj\": " + adModel.getId_obj() + ",\n");
+                writer.write("\t\t\"description\": \"" + adModel.getDescription() + "\",\n");
+                writer.write("\t\t\"dimension\": \"" + adModel.getDimension() + "\",\n");
+                writer.write("\t\t\"categorie\": \"" + adModel.getCategorie() + "\",\n");
+                writer.write("\t\t\"nom_image\": \"" + adModel.getNom_image() + "\",\n");
+                writer.write("\t\t\"id_vendeur\": " + adModel.getId_vendeur() + "\n");
+                writer.write("\t},\n");
+            }
+
+            writer.write("]");
+
+            writer.close();
+        } catch (IOException e) {
+            Log.e("AdManager", "Error writing JSON file", e);
+        }
+    }
 }
