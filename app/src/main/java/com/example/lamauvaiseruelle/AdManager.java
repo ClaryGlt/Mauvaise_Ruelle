@@ -9,9 +9,12 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -75,7 +78,7 @@ public class AdManager {
         return adModels;
     }
 
-    public void saveAdsToJson(ArrayList<AdModel> adModels) {
+    public void saveAdsToJson(ArrayList<AdModel> adModels, Context context) {
         try {
             FileOutputStream fos = context.openFileOutput("data.json", Context.MODE_PRIVATE);
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fos));
