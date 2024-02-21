@@ -92,7 +92,7 @@ public class AdManager {
                 writer.write("\t\t\"description\": \"" + adModel.getDescription() + "\",\n");
                 writer.write("\t\t\"dimension\": \"" + adModel.getDimension() + "\",\n");
                 writer.write("\t\t\"categorie\": \"" + adModel.getCategorie() + "\",\n");
-                writer.write("\t\t\"nom_image\": \"" + "none" + "\",\n");
+                writer.write("\t\t\"nom_image\": \"" + adModel.getNom_image() + "\",\n");
                 writer.write("\t\t\"id_vendeur\": " + adModel.getId_vendeur() + "\n");
                 writer.write("\t},\n");
             }
