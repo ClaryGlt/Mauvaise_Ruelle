@@ -2,6 +2,7 @@ package com.example.lamauvaiseruelle;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -28,7 +29,7 @@ public class AdViewActivity extends AppCompatActivity {
 
 
         if (!adModels.isEmpty()) {
-            FectchAd( getIntent().getIntExtra("numero truc", 0) ); //Pour l'instant 0. Sinon, on met l'endroit ou l'on se trouve dans l'arrayList lorsque que l'utilisateur clique dessus
+            FectchAd(getIntent().getIntExtra("numerotruc", 0)); //Pour l'instant 0. Sinon, on met l'endroit ou l'on se trouve dans l'arrayList lorsque que l'utilisateur clique dessus
         }
     }
 

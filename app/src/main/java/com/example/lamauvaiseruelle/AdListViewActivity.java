@@ -19,21 +19,19 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class AdListViewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.w("AdListViewActivity", "debut")
+        Log.w("AdListViewActivity", "debut");
 
         AdAdapter adAdapter = new AdAdapter(this);
-
-        Button button_descr = findViewById(R.id.button_description);
-        Log.w("AdListViewActivity", "aprdebut")
-
-
 
         ScrollView scrollView = new ScrollView(this);
         ViewGroup.LayoutParams scrollViewParams = new ViewGroup.LayoutParams(
@@ -51,23 +49,30 @@ public class AdListViewActivity extends AppCompatActivity {
         linearLayout.setOrientation((LinearLayout.VERTICAL));
         linearLayout.setLayoutParams(linearLayoutParams);
 
-        Log.w("AdListViewActivity", "avantfor")
+        Log.w("AdListViewActivity", "avantfor");
         for(int i=0; i<adAdapter.getCount(); i++){
-            Log.w("AdListViewActivity", "infor"+i) //cassde des le i=0 ici
+            Log.w("AdListViewActivity", "infor"+i);
 
-            linearLayout.addView(adAdapter.getView(i, findViewById(R.id.testtest), null));
-
-            final int numero = i;
-
-            button_descr.setOnClickListener(new View.OnClickListener() {
+            Map<View, Button> resultatMap = adAdapter.getViewMap(i, findViewById(R.id.testtest), null);
+            Set<View> keyset = resultatMap.keySet();
+            View convertedView = keyset.stream().findFirst().get();
+            Button button_desc = resultatMap.get(convertedView);
+            linearLayout.addView(convertedView);
+            Log.e("AdListViewActivity", "linearlayout");
+            int numero = i;
+            Log.w("AdListViewActivity", "aprdebut");
+            button_desc.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    Log.e("AdLVA", "avant le intent");
                     Intent lancementAdViewActivity = new Intent(AdListViewActivity.this, AdViewActivity.class);
-                    startActivity(lancementAdViewActivity);
+                    Log.e("AdLVA", "apres le intent");
                     lancementAdViewActivity.putExtra("numerotruc", numero);
+                    startActivity(lancementAdViewActivity);
+                    Log.e("AdLVA", "apres le startactivity");
                 }
             });
-            Log.w("AdListViewActivity", "fin_infor"+i)
+            Log.w("AdListViewActivity", "fin_infor"+i);
 
         }
 
