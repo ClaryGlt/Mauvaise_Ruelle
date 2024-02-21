@@ -9,10 +9,11 @@ public class AdModel {
     private String description;
     private String dimension;
     private String categorie;
+    private String nom_image;
     private int image;
     private int id_vendeur;
     // Constructor
-    public AdModel(String title, String address, String marque, int prix, int id_obj, String description, String dimension, String categorie, int image, int id_vendeur) {
+    public AdModel(String title, String address, String marque, int prix, int id_obj, String description, String dimension, String categorie, String nom_image, int image, int id_vendeur) {
         this.title = title;
         this.address = address;
         this.marque = marque;
@@ -21,13 +22,14 @@ public class AdModel {
         this.description = description;
         this.dimension = dimension;
         this.categorie = categorie;
+        this.nom_image = nom_image;
         this.image = image;
         this.id_vendeur = id_vendeur;
     }
 
     // Getter and Setter
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {
@@ -35,7 +37,7 @@ public class AdModel {
     }
 
     public String getAddress() {
-        return address;
+        return this.address;
     }
 
     public void setAddress(String address) {
@@ -43,7 +45,7 @@ public class AdModel {
     }
 
     public String getMarque() {
-        return marque;
+        return this.marque;
     }
 
     public void setMarque(String marque) {
@@ -51,7 +53,7 @@ public class AdModel {
     }
 
     public int getPrix() {
-        return prix;
+        return this.prix;
     }
 
     public void setPrix(int prix) {
@@ -59,7 +61,7 @@ public class AdModel {
     }
 
     public int getIdObj() {
-        return id_obj;
+        return this.id_obj;
     }
 
     public void setIdObj(int id_obj) {
@@ -67,7 +69,7 @@ public class AdModel {
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public void setDescription(String description) {
@@ -75,7 +77,7 @@ public class AdModel {
     }
 
     public String getDimension() {
-        return dimension;
+        return this.dimension;
     }
 
     public void setDimension(String dimension) {
@@ -83,15 +85,23 @@ public class AdModel {
     }
 
     public String getCategorie() {
-        return categorie;
+        return this.categorie;
     }
 
     public void setCategorie(String categorie) {
         this.categorie = categorie;
     }
 
+    public String getNom_image() {
+        return this.nom_image;
+    }
+
+    public void setNom_image(String nom_image) {
+        this.nom_image = nom_image;
+    }
+
     public int getImage() {
-        return image;
+        return this.image;
     }
 
     public void setImage(int image) {
@@ -99,10 +109,19 @@ public class AdModel {
     }
 
     public int getIdVendeur() {
-        return id_vendeur;
+        return this.id_vendeur;
     }
 
     public void setIdVendeur(int id_vendeur) {
         this.id_vendeur = id_vendeur;
     }
+
+    public int getIdObj() {
+        return this.idObj;
+    }
+
+    public void setIdObj(int idObj) {
+        this.idObj = idObj;
+    }
+
 }

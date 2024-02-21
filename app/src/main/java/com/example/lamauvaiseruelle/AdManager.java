@@ -66,7 +66,7 @@ public class AdManager {
                 }
                 
                 // Ajouter l'objet AdModel à la liste
-                adModels.add(new AdModel(title, address, marque, prix, id_obj, description, dimension, categorie, image, id_vendeur));
+                adModels.add(new AdModel(title, address, marque, prix, id_obj, description, dimension, categorie, nom_image, image, id_vendeur));
             }
         } catch (IOException e) {
             Log.e("AdManager", "Error reading JSON file", e);
@@ -92,7 +92,7 @@ public class AdManager {
                 writer.write("\t\t\"description\": \"" + adModel.getDescription() + "\",\n");
                 writer.write("\t\t\"dimension\": \"" + adModel.getDimension() + "\",\n");
                 writer.write("\t\t\"categorie\": \"" + adModel.getCategorie() + "\",\n");
-                writer.write("\t\t\"nom_image\": \"" + adModel.getNom_image() + "\",\n");
+                writer.write("\t\t\"nom_image\": \"" + "none" + "\",\n");
                 writer.write("\t\t\"id_vendeur\": " + adModel.getId_vendeur() + "\n");
                 writer.write("\t},\n");
             }
