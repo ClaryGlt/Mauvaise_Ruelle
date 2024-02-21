@@ -68,6 +68,8 @@ public class AdManager {
     }
 
     public void saveAdsToJson(ArrayList<AdModel> adModels, Context context) {
+            Log.e("AdManager", "Entre dans Save-----------------------------------------");
+
         try {
             FileOutputStream fos = context.openFileOutput("data.json", Context.MODE_PRIVATE);
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fos));
@@ -92,7 +94,12 @@ public class AdManager {
             writer.write("]");
 
             writer.close();
+
+            Log.e("AdManager", "fini-----------------------------------------");
+
         } catch (IOException e) {
+            Log.e("AdManager", "PROBLE%E dans Save-----------------------------------------");
+
             Log.e("AdManager", "Error writing JSON file", e);
         }
     }
