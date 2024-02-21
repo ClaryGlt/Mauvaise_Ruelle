@@ -38,15 +38,13 @@ public class AdViewActivity extends AppCompatActivity {
 
         // Références aux vues dans le layout
         TextView title_description = findViewById(R.id.title_view_page);
-        TextView address = findViewById(R.id.address_view_page);
+        TextView address = findViewById(R.id.adress_view_page);
         TextView marque = findViewById(R.id.marque_view_page);
         TextView prix = findViewById(R.id.prix_view_page);
-        TextView id_obj = findViewById(R.id.id_obj_view_page);
         TextView description_page = findViewById(R.id.Description_View_page);
-        TextView dimentions = findViewById(R.id.dimentions_view_page);
+        TextView dimentions = findViewById(R.id.dimensions_view_page);
         TextView categorie = findViewById(R.id.categorie_view_page);
         ImageView image_description = findViewById(R.id.image_view_page);
-        TextView id_vendeur = findViewById(R.id.id_vendeur_view_page);
 
 
         Button button_description_page = findViewById(R.id.button_view_page);
@@ -64,11 +62,11 @@ public class AdViewActivity extends AppCompatActivity {
         address.setText(firstAd.getAddress());
         marque.setText(firstAd.getMarque());
         prix.setText(String.valueOf(firstAd.getPrix()));
-        id_obj.setText(String.valueOf(firstAd.getIdObj()));
+        //id_obj.setText(String.valueOf(firstAd.getIdObj()));
         description_page.setText(firstAd.getDescription());
         dimentions.setText(firstAd.getDimension());
         categorie.setText(firstAd.getCategorie());
         image_description.setImageResource(firstAd.getImage());
-        id_obj.setText(String.valueOf(firstAd.getIdVendeur()));
+        //id_obj.setText(String.valueOf(firstAd.getIdVendeur()));
     }
 }

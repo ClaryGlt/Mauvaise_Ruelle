@@ -23,9 +23,38 @@
             android:id="@+id/image_view_page"
             android:layout_width="wrap_content"
             android:layout_height="400sp"
-            android:src="@drawable/echelle_telescopique"
              />
 
+
+        <TextView
+            android:id="@+id/adress_view_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/marque_view_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/prix_view_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/dimensions_view_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/categorie_view_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
 
         <TextView
             android:id="@+id/Description_View_page"

@@ -54,9 +54,11 @@ public class AdManager {
                 String categorie = adObject.get("categorie").getAsString();
                 String nom_image = adObject.get("image").getAsString();
                 int id_vendeur = adObject.get("id_vendeur").getAsInt();
+
+
                 
                 // Ajouter l'objet AdModel à la liste
-                adModels.add(new AdModel(title, address, marque, prix, id_obj, description, dimension, categorie, nom_image, id_vendeur));
+                adModels.add(new AdModel(title, address, marque, prix, id_obj, description, dimension, categorie, nom_image, GetImageIdByName(context, nom_image), id_vendeur));
             }
         } catch (IOException e) {
             Log.e("AdManager", "Error reading JSON file", e);
@@ -93,5 +95,20 @@ public class AdManager {
         } catch (IOException e) {
             Log.e("AdManager", "Error writing JSON file", e);
         }
+    }
+
+    public static int GetImageIdByName(Context context, String nom_image){
+        int image = context.getResources().getIdentifier(nom_image, "drawable", context.getPackageName());
+        if (image == -1) {
+            // Si l'image n'est pas trouvée, utiliser une image générique
+            image = context.getResources().getIdentifier("none", "drawable", context.getPackageName());
+            Log.w("AdManager", "Image pas trouvée");
+            Log.w("AdManager", nom_image);
+            if (image == 0) {
+                // Si l'image générique n'est pas trouvée, il y a un problème grave
+                Log.e("AdManager", "Aucun lien avec les images");
+            }
+        }
+        return image;
     }
 }
