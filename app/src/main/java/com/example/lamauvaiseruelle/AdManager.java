@@ -9,9 +9,12 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,22 +54,9 @@ public class AdManager {
                 String categorie = adObject.get("categorie").getAsString();
                 String nom_image = adObject.get("image").getAsString();
                 int id_vendeur = adObject.get("id_vendeur").getAsInt();
-
-                int image = context.getResources().getIdentifier(nom_image, "drawable", context.getPackageName());
-                
-                if (image == 0) { 
-                    // Si l'image n'est pas trouvée, utiliser une image générique
-                    image = context.getResources().getIdentifier("none", "drawable", context.getPackageName());
-                    Log.w("AdManager", "Image pas trouvée");
-                    Log.w("AdManager", nom_image);
-                    if (image == 0) {
-                        // Si l'image générique n'est pas trouvée, il y a un problème grave
-                        Log.e("AdManager", "Aucun lien avec les images");
-                    }    
-                }
                 
                 // Ajouter l'objet AdModel à la liste
-                adModels.add(new AdModel(title, address, marque, prix, id_obj, description, dimension, categorie, nom_image, image, id_vendeur));
+                adModels.add(new AdModel(title, address, marque, prix, id_obj, description, dimension, categorie, nom_image, id_vendeur));
             }
         } catch (IOException e) {
             Log.e("AdManager", "Error reading JSON file", e);
@@ -75,7 +65,7 @@ public class AdManager {
         return adModels;
     }
 
-    public void saveAdsToJson(ArrayList<AdModel> adModels) {
+    public void saveAdsToJson(ArrayList<AdModel> adModels, Context context) {
         try {
             FileOutputStream fos = context.openFileOutput("data.json", Context.MODE_PRIVATE);
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fos));
@@ -88,12 +78,12 @@ public class AdManager {
                 writer.write("\t\t\"address\": \"" + adModel.getAddress() + "\",\n");
                 writer.write("\t\t\"marque\": \"" + adModel.getMarque() + "\",\n");
                 writer.write("\t\t\"prix\": " + adModel.getPrix() + ",\n");
-                writer.write("\t\t\"id_obj\": " + adModel.getId_obj() + ",\n");
+                writer.write("\t\t\"id_obj\": " + adModel.getIdObj() + ",\n");
                 writer.write("\t\t\"description\": \"" + adModel.getDescription() + "\",\n");
                 writer.write("\t\t\"dimension\": \"" + adModel.getDimension() + "\",\n");
                 writer.write("\t\t\"categorie\": \"" + adModel.getCategorie() + "\",\n");
                 writer.write("\t\t\"nom_image\": \"" + adModel.getNom_image() + "\",\n");
-                writer.write("\t\t\"id_vendeur\": " + adModel.getId_vendeur() + "\n");
+                writer.write("\t\t\"id_vendeur\": " + adModel.getIdVendeur() + "\n");
                 writer.write("\t},\n");
             }
 
