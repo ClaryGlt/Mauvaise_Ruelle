@@ -1,6 +1,10 @@
 package com.example.lamauvaiseruelle;
 
+import android.content.Context;
+import android.util.Log;
+
 public class AdModel {
+    Context context;
     private String title;
     private String address;
     private String marque;
