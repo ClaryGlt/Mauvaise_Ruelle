@@ -13,7 +13,18 @@ public class AdModel {
     private int image;
     private int id_vendeur;
     // Constructor
-    public AdModel(String title, String address, String marque, int prix, int id_obj, String description, String dimension, String categorie, String nom_image, int image, int id_vendeur) {
+    public AdModel(String title, String address, String marque, int prix, int id_obj, String description, String dimension, String categorie, String nom_image, int id_vendeur) {
+        int image = context.getResources().getIdentifier(nom_image, "drawable", context.getPackageName());
+        if (image == -1) { 
+            // Si l'image n'est pas trouvée, utiliser une image générique
+            image = context.getResources().getIdentifier("none", "drawable", context.getPackageName());
+            Log.w("AdManager", "Image pas trouvée");
+            Log.w("AdManager", nom_image);
+            if (image == 0) {
+                // Si l'image générique n'est pas trouvée, il y a un problème grave
+                Log.e("AdManager", "Aucun lien avec les images");
+            }
+        }
         this.title = title;
         this.address = address;
         this.marque = marque;
