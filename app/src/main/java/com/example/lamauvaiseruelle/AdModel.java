@@ -126,13 +126,4 @@ public class AdModel {
     public void setIdVendeur(int id_vendeur) {
         this.id_vendeur = id_vendeur;
     }
-
-    public int getIdObj() {
-        return this.idObj;
-    }
-
-    public void setIdObj(int idObj) {
-        this.idObj = idObj;
-    }
-
 }
