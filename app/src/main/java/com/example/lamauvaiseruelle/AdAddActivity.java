@@ -32,6 +32,15 @@ public class AdAddActivity extends AppCompatActivity {
         TextInputEditText categorie = findViewById(R.id.cate_input);
         Button button_save = findViewById(R.id.button_add_page);
         ImageView imageView = findViewById(R.id.image_add_page);
+        Button button_foto = findViewById(R.id.button_foto);
+
+        button_foto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent lancementCameraAdAddActivity = new Intent(AdAddActivity.this, CameraAdAddActivity.class);
+                startActivity(lancementCameraAdAddActivity);
+            }
+        });
 
         int image = context.getResources().getIdentifier("none", "drawable", context.getPackageName());
         if (image == -1) {
