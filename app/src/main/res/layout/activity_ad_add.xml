@@ -25,10 +25,18 @@
 
             <ImageView
                 android:id="@+id/image_add_page"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="400sp"
-                android:src="@drawable/echelle_telescopique" />
+                android:src="@drawable/none"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true" />
 
+
+            <Button
+                android:id="@+id/button_foto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AJOUTER UNE FOTO" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/TitreInputLayout"

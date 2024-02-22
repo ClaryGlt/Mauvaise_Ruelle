@@ -17,6 +17,9 @@
         android:theme="@style/Theme.LaMauvaiseRuelle"
         tools:targetApi="31">
         <activity
+            android:name=".CameraAdAddActivity"
+            android:exported="false" />
+        <activity
             android:name=".AdViewActivity"
             android:exported="false" />
         <activity
