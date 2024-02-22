@@ -19,7 +19,7 @@
             android:id="@+id/imageview_click_image_id"
             android:layout_width="match_parent"
             android:layout_height="440dp"
-             />
+            />
 
         <LinearLayout
             android:layout_width="match_parent"

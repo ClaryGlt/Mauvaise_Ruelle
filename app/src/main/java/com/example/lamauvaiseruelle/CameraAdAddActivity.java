@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -17,12 +19,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.ByteArrayOutputStream;
+
 public class CameraAdAddActivity extends AppCompatActivity {
 
     // Define the button and imageview type variable
     Button camera_open_id;
     Button gallery_open_id;
     ImageView click_image_id;
+
 
     ActivityResultLauncher<Intent> cameraActivityResultLauncher = registerForActivityResult( new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
         @Override
@@ -65,27 +70,41 @@ public class CameraAdAddActivity extends AppCompatActivity {
             Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
             galleryActivityResultLauncher.launch(gallery);
         });
-/*
+
         Button send = findViewById(R.id.button_send_id);
 
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Exemple: Extraire l'image de la vue ImageView
+                Drawable drawable = click_image_id.getDrawable();
+                Bitmap bitmap = null;
+                if (drawable instanceof BitmapDrawable) {
+                    bitmap = ((BitmapDrawable) drawable).getBitmap();
+                }
 
-                ImageView image = findViewById(R.id. ...);
-                TextView title = findViewById(R.id. ...);
-                TextView address = findViewById(R.id. ...);
 
-                Intent intent = new Intent(CameraAdAddActivity.this, AdListViewActivity.class);
-                intent.putExtra("image", R.drawable. ...); // Add a drawable image because image management is not implemented.
-                intent.putExtra("title",  ...);
-                intent.putExtra("address", ...);
+
+                // Créer une intention pour démarrer AdAddActivity
+                Intent intent = new Intent(CameraAdAddActivity.this, AdAddActivity.class);
+
+                // Ajouter l'image sous forme de Bitmap à l'intention
+                if (bitmap != null) {
+                    // Convertir le Bitmap en un tableau d'octets pour le passer à l'intention
+                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                    bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                    byte[] byteArray = stream.toByteArray();
+                    intent.putExtra("image", byteArray);
+                }
+
+
+
+                // Démarrer AdAddActivity avec l'intention
                 startActivity(intent);
             }
-
-
         });
 
- */
+
+
     }
 }

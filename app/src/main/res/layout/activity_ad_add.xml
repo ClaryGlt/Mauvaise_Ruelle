@@ -25,9 +25,11 @@
 
             <ImageView
                 android:id="@+id/image_add_page"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="400sp"
-                android:src="@drawable/echelle_telescopique" />
+                android:src="@drawable/none"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true" />
 
 
             <Button
