@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
         Button bList = findViewById(R.id.buttonList);
         Button bAdd = findViewById(R.id.buttonAdd);
-        Button TESTER = findViewById(R.id.buttonMain);
         bList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,12 +33,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        TESTER.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AdManager adManager = new AdManager();
-                adManager.test(getApplicationContext());
-            }
-        });
     }
 }
