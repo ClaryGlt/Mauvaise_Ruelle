@@ -120,7 +120,9 @@ public class AdManager {
                     // Convertir le JSON en un tableau d'objets JSON
                     JsonArray jsonArray = new Gson().fromJson(bigString, JsonArray.class);
 
+                    jsonArray.remove(jsonArray.size()-1); //fuck l'element cassay
 
+                    int indexDebug =0;
                     // Parcourir chaque élément du tableau JSON
                     for (JsonElement element : jsonArray) {
                         JsonObject adObject = element.getAsJsonObject();
@@ -133,13 +135,15 @@ public class AdManager {
                         String description = adObject.get("description").getAsString();
                         String dimension = adObject.get("dimension").getAsString();
                         String categorie = adObject.get("categorie").getAsString();
-                        Log.d("qqqzq", "imcass");
-                        String nom_image = adObject.get("image").getAsString(); ///////GROS PB AVEC L'IMAGE TODO: REPARER !!!!!
-                        //                                                                                                    java.lang.RuntimeException: Unable to start activity ComponentInfo{com.example.lamauvaiseruelle/com.example.lamauvaiseruelle.AdAddActivity}: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String com.google.gson.JsonElement.getAsString()' on a null object reference
+                        Log.d("qqqzq", "imcass"+indexDebug);
+                        indexDebug++;
+                        String nom_image = adObject.get("nom_image").getAsString();
                         int id_vendeur = adObject.get("id_vendeur").getAsInt();
+                        Log.d("qqqzq", "jesepa"+indexDebug);
 
                         // Ajouter l'objet AdModel à la liste
                         adModels.add(new AdModel(title, address, marque, prix, id_obj, description, dimension, categorie, nom_image, GetImageIdByName(context, nom_image), id_vendeur));
+                        Log.d("qqqzq", "ccaccacaccacassé"+indexDebug);
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
