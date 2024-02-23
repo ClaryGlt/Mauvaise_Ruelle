@@ -96,8 +96,9 @@ public class AdAddActivity extends AppCompatActivity {
 
                 int idVendeur = new Random().nextInt(4);
 
-                AdModel nouvelObjet = new AdModel(titre.getText().toString(), adresse.getText().toString(), marque.getText().toString(), Integer.parseInt(prix.getText().toString()), id, description.getText().toString(), dimensions.getText().toString(), categorie.getText().toString(), "none", temp, idVendeur);
-                Log.e("AAAAAAAAAAAA", titre.getText().toString());
+                int prixx = 12;
+                AdModel nouvelObjet = new AdModel(titre.getHint().toString(), adresse.getHint().toString(), marque.getHint().toString(), prixx, id, description.getHint().toString(), dimensions.getHint().toString(), categorie.getHint().toString(), "none", temp, idVendeur);
+
                 adModels.add(nouvelObjet);
                 adManager.saveAdsToJson(adModels, context);
             }
