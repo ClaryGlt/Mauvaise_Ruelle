@@ -60,8 +60,6 @@ public class AdAdapter extends BaseAdapter {
         imageIV.setImageResource(ad.getImage());
         titleTV.setText(ad.getTitle());
         addressTV.setText(ad.getAddress());
-        Log.d("AdAdapter", titleTV.toString());
-        Log.d("AdAdapter", addressTV.toString());
 
         Result.put(convertview, button_desc);
         return Result;

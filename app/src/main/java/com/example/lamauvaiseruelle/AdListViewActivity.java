@@ -49,30 +49,22 @@ public class AdListViewActivity extends AppCompatActivity {
         linearLayout.setOrientation((LinearLayout.VERTICAL));
         linearLayout.setLayoutParams(linearLayoutParams);
 
-        Log.w("AdListViewActivity", "avantfor");
         for(int i=0; i<adAdapter.getCount(); i++){
-            Log.w("AdListViewActivity", "infor"+i);
 
             Map<View, Button> resultatMap = adAdapter.getViewMap(i, findViewById(R.id.testtest), null);
             Set<View> keyset = resultatMap.keySet();
             View convertedView = keyset.stream().findFirst().get();
             Button button_desc = resultatMap.get(convertedView);
             linearLayout.addView(convertedView);
-            Log.e("AdListViewActivity", "linearlayout");
             int numero = i;
-            Log.w("AdListViewActivity", "aprdebut");
             button_desc.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Log.e("AdLVA", "avant le intent");
                     Intent lancementAdViewActivity = new Intent(AdListViewActivity.this, AdViewActivity.class);
-                    Log.e("AdLVA", "apres le intent");
                     lancementAdViewActivity.putExtra("numerotruc", numero);
                     startActivity(lancementAdViewActivity);
-                    Log.e("AdLVA", "apres le startactivity");
                 }
             });
-            Log.w("AdListViewActivity", "fin_infor"+i);
 
         }
 
